@@ -104,3 +104,9 @@ a{
     font-size: 20px;
     font-weight: 700;
 }
+.error{
+    color:#e81d24;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}

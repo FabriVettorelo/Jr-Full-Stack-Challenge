@@ -77,7 +77,7 @@ function Menu() {
                     ))}
                     <div className='total'>Total: ${total}</div>
                     <button onClick={handleCreateOrder} className='acct'>Create Order</button>
-                    {error && <div className="error">{error}</div>}
+                    {error && <div className="error">*Error: "{error}", try again later</div>}
                 </PopupCart>
             }
             <div className="exit">
