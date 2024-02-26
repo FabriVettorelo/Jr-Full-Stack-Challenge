@@ -1,0 +1,106 @@
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 12vw;
+    background-color: #e81d24;
+    box-sizing: border-box;
+}
+
+.menu-logo {
+    width: 100%;
+    height: auto;
+}
+
+.menu-link {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 35px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.menu-link:hover {
+    color: #f4952d;
+    transition: 0.5s;
+}
+.exit{
+    margin-top: 20vh;
+    margin-bottom: 5vh;
+}
+.exit a{
+    color:#ffffff;
+    font-size: 18px;
+}
+.exit a:hover{
+    color:#f4952d;
+    font-size: 22px;
+    transition: 0.5s;
+}
+.store{
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 12px;
+    margin-bottom: 20vh;
+}
+.cart{
+    background-color: white;
+    border-radius: 50px;
+    padding: 10px;
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    cursor: pointer;    
+}
+.cant{
+    width: fit-content;
+    color: white;
+    background-color:#f4952d;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -8px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+}
+a{
+    text-decoration: none;
+}
+.ped{
+    padding: 12px;
+    display: flex;
+    font-size: 18px;
+    font-weight: 600;
+}
+.cancl{
+    margin-left: auto;
+    border: none;
+    background-color: #e81d24;
+    color:white;
+    border-radius: 10px;
+}
+.cancl:hover{
+    background-color: #e81d24c9;
+}
+.acct{
+    border: none;
+    background-color: #f4952d;
+    color:white;
+    border-radius: 50px;
+    padding: 10px;
+    width: 50%;
+}
+.acct:hover{
+    background-color: #f4942dbe;
+}
+.total{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #f4952d;
+    font-size: 20px;
+    font-weight: 700;
+}

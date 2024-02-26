@@ -1,0 +1,9 @@
+.order-pizza{
+    margin-left: 12vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding-right: 5vw;
+    padding-left: 5vw;
+}

@@ -1,0 +1,60 @@
+  .backgroundmain{
+    background-image: url('../src/assets/img/background_restaurant.jpg');
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+  }
+  .containershade {
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    height: 100vh;
+    background-image: linear-gradient(to right, rgba(255, 250, 240, 0.692) 50%, transparent 50%);
+  }
+  
+  .circle-container {
+    width: 300px; 
+    height: 300px; 
+    border-radius: 50%; 
+    overflow: hidden;
+    background-color: #ccc; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 25vh;
+    margin-bottom: 10vh;
+  }
+  .address{
+    margin-left: 20vw;
+    color: grey;
+  }
+  .startbutton{
+    margin-top: 3vh;
+    margin-left: 20vw;
+  }
+  .logo {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+  }
+  .startbutton a{
+    background-color: red;
+    color:white;
+    padding: 8px;
+    font-size: 28px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 16px;
+  }
+  h4{
+    margin: 0;
+  }
+  .hoverw a:hover{
+    transition: 1s;
+    background-color: white;
+    color:red;
+  }
