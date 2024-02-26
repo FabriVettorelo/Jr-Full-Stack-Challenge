@@ -7,3 +7,12 @@
     padding-right: 5vw;
     padding-left: 5vw;
 }
+@media (max-width: 768px) {
+    .order-pizza{
+        margin-top: 10vh;
+        width: 100vw;
+        margin-left: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}

@@ -16,7 +16,7 @@ const MyOrders = () => {
 
     return (
         <div className='conttab'>
-            <h2>MY ORDERS</h2>       
+            <h2 className='ordti'>MY ORDERS</h2>       
             {orders.map(order => {
                 const totalCost = order.items.reduce((totalCost, item) => {
                     const pizza = allPizzas.find(p => p.name === item.pizza);
@@ -32,7 +32,7 @@ const MyOrders = () => {
                                 <div>Units: {item.quantity}</div>
                             </div>
                         ))}
-                        <div>Total cost: {totalCost}</div>
+                        <div className='tot'>Total cost: ${totalCost}</div>
                     </div>
                 );
             })}
