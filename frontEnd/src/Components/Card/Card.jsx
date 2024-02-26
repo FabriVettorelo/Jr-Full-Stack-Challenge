@@ -7,7 +7,7 @@ function Card({ name, price, image, onClick }) {
             <div className='card1'>
                 <img src={image} alt={name} className="card1-image" />
                 <h2 className="card1-name">{name}</h2>
-                <p className="card1-price">{price}</p>
+                <h5 className="card1-price">${price}</h5>
             </div>
         </div>
     );
