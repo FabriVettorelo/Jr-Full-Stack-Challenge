@@ -1,47 +1,31 @@
-Challenge for Fullstack Developer
-===============================
+# 🍕Pizzarelo - FullStack Challenge
 
-This is intended to be developed within 2 to 4 hours (plus prep time if using an unfamiliar language).
+Con esta aplicación se genera un backend donde se almacenan órdenes generadas desde el sitio y donde veremos a las diferentes pizzas disponibles. Desde el front tenemos acceso a lo que simula ser el menú de un restaurante de pizzas, podemos sumar ítems a nuestro carrito y realizar la orden y ver nuestras órdenes previas en "Mis Ordenes".
 
+## Backend
 
-Evaluation
-----------
+Luego de clonar el repo, sitúa la consola en la carpeta backend y ejecuta ```npm i``` para instalar las dependencias necesarias para el back, una vez listo puedes ejecutar ```npm start``` en la consola para iniciar tu servidor local en el puerto 3001. Este backend genera dos endpoints, uno es una lista de las pizzas disponibles y el otro se almacenan las órdenes realizadas. Este backend también cuenta con **testing** con jest, para ejecutarlos debes ingresar en la consola ```npm test``` mientras tienes el backend activo con ```npm start```.
 
-Our goal is to find answers to these questions on the backend:
-* Do your tests reflect best practices such as BDD?
-* Do you understand RESTful interfaces?
-* Do you follow SOLID principles?
-* Do you know how to use Express Validator
-* Do you know how to use JEST
+```http://localhost:3001/api/orders``` & ```http://localhost:3001/api/pizzas```
 
+## Frontend
 
-Our goal is to find answers to these questions on the frontend:
-* Do you understand the JavaScript language and more in general web technologies?
-* Can you design interfaces that are clear and easy to use?
-* Do you know how to make unit test in front env. 
+Abre la consola en el directorio de la carpeta frontend y ejecuta ```npm i``` para instalar las dependencias necesarias. Luego puedes iniciar el sitio en el puerto 3000 al ingresar ```npm run dev``` en la consola, ya que esta app está realizada con React Vite. En ```http://localhost:3000/``` podrás ver la landing inicial, desde allí podrás ingresar y empezar a agregar pizzas a tu carrito al cual puedes acceder haciendo click en el icono "🛒". Al hacer click en el carrito veras el detalle de tu orden y puedes generarla con cualquier cantidad de pizzas variadas que desees. Si la orden se generó sin problemas recibirás un mensaje confirmando, en caso de haber un error recibirás un mensaje detallando el error.
 
+## Formato JSON para POST de una orden
 
-Our goal is to find answers to these questions in general:
-* Do you understand the chosen stack, framework, and MVC pattern in general?
-* Can you judge which library/framework is the best fit for a job and use it correctly?
-* Do you master your working environment?
+Si buscas realizar un pedido mediante postman, mientras tienes el backend activo debes enviar un JSON como el siguiente:
+```
+{
+    "items":[
+        {
+            "pizza":"Romana",
+            "quantity":2
+        }
+    ]
+    }
+```
 
+A la URL ```http://localhost:3001/api/orders``` como POST, a tener en cuenta que hay 5 variedades de pizza y debe ser sí o sí una de estas para que se pueda postear. (Romana, Bufala, Margherita, Pizza Bianca, Diavola)
 
-Definition of DONE
-----------
-
-Each of the developed challenges, should consider the following requirements in order to be considered as DONE: 
-*   The actual code
-*   Unit Test
-*   Express Validation Schema
-*   Postman mockup example
-*   Resume or Documentation
-
-
-Deliverables
-----------
-
-Prioritize the requirement accomplishment over non-requested enhancements; although enhancements will be considered, the goal is to present a decent and understandable application to the user.
-
-* Link to Github repo
-* Instructions how to run the app
+¡Un saludo! Fabri V.
