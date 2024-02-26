@@ -10,6 +10,7 @@ const initialState = {
   pizza: {},
   error: null,
   orderCreated: false,
+  recentOrder:{},
   orders: [],
 };
 
@@ -25,7 +26,7 @@ const reducer = (state = initialState, action) => {
       return { ...state, cart: state.cart.filter((item) => item !== action.payload) };
 
     case CREATE_ORDER_SUCCESS:
-      return { ...state, cart: [], orderCreated: true };
+      return { ...state, cart: [], orderCreated: true, recentOrder:action.payload };
 
     case CREATE_ORDER_FAILURE:
       return { ...state, error: action.payload, orderCreated: false};

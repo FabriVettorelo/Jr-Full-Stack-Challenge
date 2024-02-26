@@ -15,6 +15,7 @@ function Menu() {
     const error = useSelector(state => state.error);
     const orderCreated = useSelector(state => state.orderCreated);
     const [isPopupOpen, setIsPopupOpen] = useState(false);
+    const recentOrder = useSelector(state => state.recentOrder);
 
     const handleCartClick = () => {
         if (cart.length > 0) {
@@ -34,16 +35,19 @@ function Menu() {
         dispatch(removeFromCart(item));
       };
 
-    useEffect(() => {
+      useEffect(() => {
         if (orderCreated) {
-            Swal.fire(
-                'Order Created!',
-                'Your order has been created successfully.',
-                'success'
-            );
+            const orderItems = recentOrder.items.map(item => `${item.quantity} x ${item.pizza}`).join(', ');
+            Swal.fire({
+                title: `Order #${recentOrder.id} Created!`,
+                html: `Your order has been created successfully.<br/>Items: ${orderItems}`,
+                icon: 'success',
+                confirmButtonColor: '#e81d24', 
+                confirmButtonText: 'OK', 
+              });
             handleClosePopup();
         }
-    }, [orderCreated]);
+    }, [orderCreated, recentOrder]);
 
     const total = cart.reduce((total, item) => total + Number(item.price) * item.quantity, 0);
 
